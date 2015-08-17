@@ -14,6 +14,8 @@ public class KillImpl extends KillAbstract {
 	}
 
 	public static void main(String[] args) {
-//11111
+
+//11111  //333333
+
 	}
 }
