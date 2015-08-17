@@ -1,22 +1,21 @@
 /**
- * 
+ *
  */
 package com.wgp.interfaceabstract;
 
 /**
- * @description: 
+ * @description:
  * @author 魏钢鹏
  * @version 创建时间：2012-3-12 下午09:41:56
  */
 public class KillImpl extends KillAbstract {
 
-	public void doAcaculate(long a, long b) {
-	}
+    public void doAcaculate(long a, long b) {
+    }
 
-	public static void main(String[] args) {
-//333333
-        //4444
+    public static void main(String[] args) {
 
+//11111  //333333 //9999 //00
         //6666
-	}
+    }
 }
