@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.wgp.interfaceabstract;
 
