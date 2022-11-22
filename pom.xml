@@ -121,13 +121,6 @@
           <artifactId>spring-webmvc</artifactId>
           <version>${spring.version}</version>
       </dependency>
-      <!-- mongo begin -->
-      <dependency>
-          <groupId>com.mongodb.mongo</groupId>
-          <artifactId>mongo</artifactId>
-          <version>${mongo.version}</version>
-      </dependency>
-      <!-- mongo end -->
       <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
