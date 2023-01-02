@@ -5,7 +5,7 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertFalse;
 
 /**
- * 01.02. �ж��Ƿ�Ϊ�ַ�����
+ * 01.02. 判定是否互为字符重排
  * @author gangpeng.wgp
  * @date 2022/6/29 10:16 PM
  */
@@ -17,8 +17,8 @@ public class CheckPermutation {
         }
         int[] arr1 = new int[26];
         int[] arr2 = new int[26];
-        //����֪ʶ��Сд��ĸת���֣�char ��ֵ �� 'a' �ɵõ� 0 ~ 25������
-        //��Ӧ��ĸλ�ó��ִ�����һ
+        //背景知识：小写字母转数字，char 的值 减 'a' 可得到 0 ~ 25的数字
+        //对应字母位置出现次数加一
         for (int i = 0; i < s1.length(); i++) {
             arr1[s1.charAt(i) - 'a'] += 1;
             arr2[s2.charAt(i) - 'a'] += 1;
@@ -33,6 +33,6 @@ public class CheckPermutation {
 
     @Test
     public void testCase() throws Exception {
-        assertFalse(new easy.CheckPermutation().checkPermutation("cuhv", "cuvs"));
+        assertFalse(new CheckPermutation().checkPermutation("cuhv", "cuvs"));
     }
 }

@@ -1,9 +1,8 @@
 package com.wgp.middle;
 
 import com.wgp.easy.ListNode;
+import com.wgp.middle.listnode.M61_RotateRight;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author gangpeng.wgp

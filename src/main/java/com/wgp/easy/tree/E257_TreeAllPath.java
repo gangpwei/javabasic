@@ -8,60 +8,29 @@ import org.junit.Test;
 import util.TreeNode;
 
 /**
- * 判断它是否是高度平衡的二叉树
+ * 二叉树的所有路径
  * @author gangpeng.wgp
  * @date 2022/5/30 10:21 PM
  */
 public class E257_TreeAllPath {
 
     public List<String> binaryTreePaths(TreeNode root) {
-        if(root == null){
-            return null;
-        }
         List<String> result = new ArrayList<>();
-        List<String> leftPathList = binaryTreePaths(root.left, String.valueOf(root.val));
-        if(leftPathList != null){
-            result.addAll(leftPathList);
-        }
-
-        List<String> rightPathList = binaryTreePaths(root.right, String.valueOf(root.val));
-        if(rightPathList != null){
-            result.addAll(rightPathList);
-        }
-
-        if(leftPathList == null && rightPathList == null){
-            return Collections.singletonList(String.valueOf(root.val));
-        }
-
+        dfs(root, null, result);
         return result;
     }
 
-    public List<String> binaryTreePaths(TreeNode currentNode, String path) {
-        if(currentNode == null){
-            return null;
+    private void dfs(TreeNode node, String path, List<String> result){
+        if(node == null){
+            return;
         }
-
-        path += "->" + String.valueOf(currentNode.val);
-
-        List<String> result = new ArrayList<>();
-
-        String tempPath = path;
-
-        List<String> leftPathList = binaryTreePaths(currentNode.left, tempPath);
-        if(leftPathList != null){
-            result.addAll(leftPathList);
+        path = path == null ? String.valueOf(node.val) : path + "->" + node.val;
+        if(node.left == null && node.right == null){
+            result.add(path);
+            return;
         }
-
-        List<String> rightPathList = binaryTreePaths(currentNode.right, tempPath);
-        if(rightPathList != null){
-            result.addAll(rightPathList);
-        }
-
-        if(leftPathList == null && rightPathList == null){
-            return Collections.singletonList(path);
-        }
-
-        return result;
+        dfs(node.left, path, result);
+        dfs(node.right, path, result);
     }
 
     @Test

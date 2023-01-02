@@ -1,5 +1,6 @@
 package com.wgp.middle;
 
+import com.wgp.middle.num.M12_RomanToInt;
 import junit.framework.TestCase;
 
 /**

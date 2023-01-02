@@ -26,7 +26,7 @@ public class E404_SumOfLeftLeaves {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
 
-        int result = new easy.tree.E404_SumOfLeftLeaves().sumOfLeftLeaves(root);
+        int result = new E404_SumOfLeftLeaves().sumOfLeftLeaves(root);
         Assert.assertEquals(24, result);
     }
 

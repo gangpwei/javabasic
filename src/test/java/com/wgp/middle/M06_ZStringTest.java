@@ -1,5 +1,6 @@
 package com.wgp.middle;
 
+import com.wgp.middle.string.M06_ZString;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

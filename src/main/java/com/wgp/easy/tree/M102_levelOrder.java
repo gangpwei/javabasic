@@ -21,7 +21,7 @@ public class M102_levelOrder {
         }
 
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        //插入根节点，offer 和 add 的区别：offer 不跑异常，返回false; add 会抛异常
+        //插入根节点，offer 和 add 的区别：offer 不抛异常，返回false; add 会抛异常
         queue.offer(root);
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<Integer>();

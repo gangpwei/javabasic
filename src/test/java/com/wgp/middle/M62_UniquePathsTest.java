@@ -1,5 +1,6 @@
 package com.wgp.middle;
 
+import com.wgp.middle.matrix.M62_UniquePaths;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

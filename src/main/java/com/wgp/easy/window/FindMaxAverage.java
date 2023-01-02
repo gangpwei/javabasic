@@ -28,21 +28,27 @@ public class FindMaxAverage {
 
 
     public double findMaxAverage(int[] nums, int k) {
+        //注意，初始值为负无穷
         double maxAvg = Double.NEGATIVE_INFINITY;
-        int first = 0;
         int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
+
+        //统计第一个窗口的和
+        for (int i = 0; i < k; i++) {
+            sum = sum + nums[i];
+        }
+
+        int first = nums[0];
+        maxAvg = (double)sum / k;
+
+        for (int i = 1; i < nums.length; i++) {
+            //注意：数组越界
             if (i + k > nums.length) {
                 return maxAvg;
             }
-            if (i == 0) {
-                for (int j = 0; j < k; j++) {
-                    sum = sum + nums[j];
-                }
-            } else {
-                sum = sum - first + nums[i + k - 1];
-            }
+            sum = sum - first + nums[i + k - 1];
+
             first = nums[i];
+            //注意：2个int相除要转double
             double avg = (double)sum / k;
             maxAvg = Math.max(maxAvg, avg);
         }

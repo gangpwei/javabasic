@@ -1,5 +1,6 @@
 package com.wgp.middle;
 
+import com.wgp.middle.num.M16_ThreeSumClosest;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

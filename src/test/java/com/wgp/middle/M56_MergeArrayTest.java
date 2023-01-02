@@ -2,6 +2,7 @@ package com.wgp.middle;
 
 import java.util.Arrays;
 
+import com.wgp.middle.num.M56_MergeArray;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

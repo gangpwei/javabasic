@@ -1,6 +1,6 @@
 package com.wgp.easy.listnode;
 
-import easy.ListNode;
+import com.wgp.easy.ListNode;
 import org.junit.Test;
 
 class AddTwoNumbers {

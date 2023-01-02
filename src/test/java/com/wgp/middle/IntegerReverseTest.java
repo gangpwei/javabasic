@@ -1,6 +1,6 @@
 package com.wgp.middle;
 
-import com.wgp.middle.M07_IntegerReverse;
+import com.wgp.middle.num.M07_IntegerReverse;
 import junit.framework.TestCase;
 import org.junit.Assert;
 

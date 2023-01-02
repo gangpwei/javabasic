@@ -1,6 +1,6 @@
 package com.wgp.middle;
 
-import com.wgp.middle.M03_LengthOfLongestSubstring;
+import com.wgp.middle.string.M03_LengthOfLongestSubstring;
 import junit.framework.TestCase;
 import org.junit.Assert;
 

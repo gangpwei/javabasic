@@ -2,21 +2,21 @@ package com.wgp.easy.listnode;
 
 import java.util.Stack;
 
-import easy.ListNode;
+import com.wgp.easy.ListNode;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
- * �ж��Ƿ������
+ * 判断是否回文数
  * @author : gangpeng.wgp
  * @date : 2022/11/16
  */
 public class E234_IsPalindrome {
 
     /**
-     * ��ջ���������Դ���
+     * 用栈先入后出特性处理
      * @param head
      * @return
      */
@@ -26,7 +26,7 @@ public class E234_IsPalindrome {
         }
         ListNode temp = head;
 
-        //���ݴ���ջ��
+        //数据存入栈中
         Stack<Integer> stack = new Stack<>();
         while(head != null){
             stack.push(head.val);
@@ -34,7 +34,7 @@ public class E234_IsPalindrome {
         }
         head = temp;
 
-        //��ջ��������β��Ԫ�أ�������ͷ�����ȶ�
+        //出栈，即链表尾部元素，和链表头部做比对
         while(!stack.empty()){
             if(stack.pop() != head.val){
                 return false;
