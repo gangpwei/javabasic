@@ -5,9 +5,9 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
- * ��������
+ * 快速排序
  * @author gangpeng.wgp
- * @date 2023/1/7 ����4:31
+ * @date 2023/1/7 下午4:31
  */
 public class QuickSort {
 
@@ -16,8 +16,8 @@ public class QuickSort {
     }
 
     /**
-     * ʱ�临�Ӷ� O(nlogn��
-     * �ռ临�Ӷ� O(1)
+     * 时间复杂度 O(nlogn）
+     * 空间复杂度 O(1)
      * @param array
      * @param start
      * @param end
@@ -26,30 +26,30 @@ public class QuickSort {
         if(start >= end){
             return;
         }
-        //�õ�һ��Ԫ����Ϊ��׼ֵ
+        //拿第一个元素作为基准值
         int base = array[start];
 
-        //ע�⣬ҪŪ2��ָ��ֱ�ָ��ͷβ������ֱ����ͷβ�ں����������
-        // ��Ϊ�����ݹ黹��Ҫ�õ�ͷβ����
+        //注意，要弄2个指针分别指向头尾，不能直接用头尾在后面的运算中
+        // 因为最后面递归还需要用到头尾参数
         int left = start;
         int right = end;
         while(left < right){
 
-            //���������ң���һ���Ȼ�׼ֵС��ֵ
+            //从右往左找，第一个比基准值小的值
             while (left < right && array[right] >= base){
                 right --;
             }
 
-            //���������ң���һ���Ȼ�׼ֵ���ֵ
+            //从左往右找，第一个比基准值大的值
             while (left < right && array[left] <= base){
                 left ++;
             }
 
             if(left < right){
-                //����left��right����
+                //交换left与right相遇
                 swap(array, left, right );
             }else if(left == right){
-                //������׼ֵ�� left��right ����λ�õ�ֵ
+                //交换基准值和 left与right 相遇位置的值
                 swap(array, start, left );
             }
         }
@@ -59,7 +59,7 @@ public class QuickSort {
     }
 
     /**
-     * ����2��λ��
+     * 交换2数位置
      * @param array
      * @param indexA
      * @param indexB

@@ -7,22 +7,22 @@ import java.util.Map;
 import org.junit.Test;
 
 /**
- * 2ÊıÖ®ºÍµÈÓÚÄ¿±êÖµ
- * Map ´æ£ºµ±Ç°Öµ ºÍ Æä×ø±ê
+ * 2æ•°ä¹‹å’Œç­‰äºç›®æ ‡å€¼
+ * Map å­˜ï¼šå½“å‰å€¼ å’Œ å…¶åæ ‡
  * @author weigangpeng
- * @date 2018/01/21 ÉÏÎç11:24
+ * @date 2018/01/21 ä¸Šåˆ11:24
  */
 
 public class E01_twoSum {
 
     /**
-     * 2ÊıÖ®ºÍ£¬¹şÏ£·¨
+     * 2æ•°ä¹‹å’Œï¼Œå“ˆå¸Œæ³•
      * @param nums
      * @param target
      * @return
      */
     public int[] twoSum0(int[] nums, int target) {
-        //key: ÊıµÄÖµ£¬value: Êı×éÖĞµÄÏÂ±ê
+        //key: æ•°çš„å€¼ï¼Œvalue: æ•°ç»„ä¸­çš„ä¸‹æ ‡
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
@@ -31,6 +31,29 @@ public class E01_twoSum {
                 return new int[]{map.get(otherValue), i};
             }
             map.put(nums[i], i);
+        }
+        return new int[0];
+    }
+
+    /**
+     * äºŒåˆ†æ³•
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum(int[] nums, int target) {
+        for (int i=0; i<nums.length; i++){
+            int l = i + 1, r = nums.length -1;
+            while (l < r){
+                int mid = l + (r - l) / 2;
+                if(nums[mid] == target - nums[i]){
+                    return new int[]{nums[i], nums[mid]};
+                }else if(nums[mid] > target - nums[i]){
+                    r = mid -1;
+                }else if(nums[mid] < target - nums[i]){
+                    l = mid + 1;
+                }
+            }
         }
         return new int[0];
     }

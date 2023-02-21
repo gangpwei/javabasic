@@ -3,18 +3,18 @@ package com.wgp.middle.listnode;
 import com.wgp.easy.ListNode;
 
 /**
- * ·Ö¸ôÁ´±í
+ * åˆ†éš”é“¾è¡¨
  *
  * @author : gangpeng.wgp
  * @date : 2022/12/4
  */
-class M86_RerangeListNode {
-    //¸øÄãÒ»¸öÁ´±íµÄÍ·½Úµã head ºÍÒ»¸öÌØ¶¨Öµ x £¬ÇëÄã¶ÔÁ´±í½øĞĞ·Ö¸ô£¬Ê¹µÃËùÓĞ Ğ¡ÓÚ x µÄ½Úµã¶¼³öÏÖÔÚ ´óÓÚ»òµÈÓÚ x µÄ½ÚµãÖ®Ç°¡£
+public class M86_RerangeListNode {
+    //ç»™ä½ ä¸€ä¸ªé“¾è¡¨çš„å¤´èŠ‚ç‚¹ head å’Œä¸€ä¸ªç‰¹å®šå€¼ x ï¼Œè¯·ä½ å¯¹é“¾è¡¨è¿›è¡Œåˆ†éš”ï¼Œä½¿å¾—æ‰€æœ‰ å°äº x çš„èŠ‚ç‚¹éƒ½å‡ºç°åœ¨ å¤§äºæˆ–ç­‰äº x çš„èŠ‚ç‚¹ä¹‹å‰ã€‚
     //
-    //ÄãÓ¦µ± ±£Áô Á½¸ö·ÖÇøÖĞÃ¿¸ö½ÚµãµÄ³õÊ¼Ïà¶ÔÎ»ÖÃ¡£
+    //ä½ åº”å½“ ä¿ç•™ ä¸¤ä¸ªåˆ†åŒºä¸­æ¯ä¸ªèŠ‚ç‚¹çš„åˆå§‹ç›¸å¯¹ä½ç½®ã€‚
 
     public ListNode partition(ListNode head, int x) {
-        //Åª2¸öÁ´±í£¬Ò»¸ö´æĞ¡ÓÚXµÄ£¬Ò»¸ö´æ´óÓÚµÈÓÚXµÄ¡£ÔÙ°Ñ´óÓÚXµÄ½Óµ½Ğ¡ÓÚXµÄºóÃæ
+        //å¼„2ä¸ªé“¾è¡¨ï¼Œä¸€ä¸ªå­˜å°äºXçš„ï¼Œä¸€ä¸ªå­˜å¤§äºç­‰äºXçš„ã€‚å†æŠŠå¤§äºXçš„æ¥åˆ°å°äºXçš„åé¢
         ListNode smallHead = new ListNode(0, head);
         ListNode small = smallHead;
         ListNode largeHead = new ListNode(0, head);
@@ -30,7 +30,7 @@ class M86_RerangeListNode {
             }
             curr = curr.next;
         }
-        //×¢Òâ£ºÕâÀïÒª¶Ï¿ª£¬·ñÔò»áºÍĞ¡ÓÚXµÄ½ÚµãĞÎ³É»·
+        //æ³¨æ„ï¼šè¿™é‡Œè¦æ–­å¼€ï¼Œå¦åˆ™ä¼šå’Œå°äºXçš„èŠ‚ç‚¹å½¢æˆç¯
         large.next = null;
         small.next = largeHead.next;
         return smallHead.next;

@@ -59,6 +59,9 @@ public class M102_levelOrder {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
 
-        levelOrder(root);
+        List<List<Integer>> list =  levelOrder(root);
+        for (List<Integer> integers : list) {
+            System.out.println(integers);
+        }
     }
 }

@@ -26,7 +26,6 @@ public class FindMaxAverage {
     //输入：nums = [5], k = 1
     //输出：5.00000
 
-
     public double findMaxAverage(int[] nums, int k) {
         //注意，初始值为负无穷
         double maxAvg = Double.NEGATIVE_INFINITY;
@@ -59,9 +58,9 @@ public class FindMaxAverage {
     public void runTest() throws Exception {
         int[] nums = {1, 12, -5, -6, 50, 3};
         int k = 4;
-        double result =0;
+        double result = 0;
 
-        result= findMaxAverage(nums, k);
+        result = findMaxAverage(nums, k);
         Assert.assertTrue(result == 12.75000);
 
         nums = new int[] {5};

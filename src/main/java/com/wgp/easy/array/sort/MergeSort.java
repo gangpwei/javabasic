@@ -5,10 +5,10 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
- * ¹é²¢ÅÅĞò
+ * å½’å¹¶æ’åº
  *
  * @author gangpeng.wgp
- * @date 2023/1/7 ÏÂÎç4:31
+ * @date 2023/1/7 ä¸‹åˆ4:31
  */
 public class MergeSort {
 
@@ -19,20 +19,20 @@ public class MergeSort {
 
     public static void sort(int[] array, int left, int right, int[] temp) {
         if (left < right) {
-            //Çó³öÖĞ¼äÖµ
+            //æ±‚å‡ºä¸­é—´å€¼
             int mid = (left + right) / 2;
 
-            //Ïò×ó±ß·Ö½â
+            //å‘å·¦è¾¹åˆ†è§£
             sort(array, left, mid, temp);
-            //ÏòÓÒ±ß·Ö½â
+            //å‘å³è¾¹åˆ†è§£
             sort(array, mid + 1, right, temp);
-            //ºÏ²¢Êı¾İ
+            //åˆå¹¶æ•°æ®
             sum(array, left, right, mid, temp);
         }
     }
 
     /**
-     * ºÏ²¢2¸öÓĞĞòÊı×é
+     * åˆå¹¶2ä¸ªæœ‰åºæ•°ç»„
      *
      * @param array
      * @param left
@@ -44,10 +44,10 @@ public class MergeSort {
         int i = left;
         int j = mid + 1;
 
-        //Ö¸ÏòÁÙÊ±Êı×éÏÂ±ê
+        //æŒ‡å‘ä¸´æ—¶æ•°ç»„ä¸‹æ ‡
         int t = 0;
 
-        //¿ªÊ¼Ñ­»·±È½Ï×óÓÒÁ½±éÊı×éÔªËØ±È½Ï
+        //å¼€å§‹å¾ªç¯æ¯”è¾ƒå·¦å³ä¸¤éæ•°ç»„å…ƒç´ æ¯”è¾ƒ
         while (i <= mid && j <= right) {
             if (array[i] <= array[j]) {
                 temp[t] = array[i];
@@ -60,7 +60,7 @@ public class MergeSort {
             }
         }
 
-        //°ÑÊ£ÓàµÄÔªËØÖ±½Ó´æ·ÅÔÚÁÙÊ±Êı×éÖĞ
+        //æŠŠå‰©ä½™çš„å…ƒç´ ç›´æ¥å­˜æ”¾åœ¨ä¸´æ—¶æ•°ç»„ä¸­
         while (i <= mid) {
             temp[t] = array[i];
             t++;
@@ -72,7 +72,7 @@ public class MergeSort {
             j++;
         }
 
-        //ÁÙÊ±Êı×éÖĞµÄÔªËØ¿½±´ÖÁÔ­Êı×éÖĞ
+        //ä¸´æ—¶æ•°ç»„ä¸­çš„å…ƒç´ æ‹·è´è‡³åŸæ•°ç»„ä¸­
         int tempIndex = left;
         int k = 0;
         while (tempIndex <= right) {

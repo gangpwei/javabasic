@@ -3,6 +3,11 @@ package com.wgp.easy.window;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 public class ContainsNearbyDuplicate {
 
     //给你一个整数数组?nums 和一个整数?k ，判断数组中是否存在两个 不同的索引?i?和?j ，满足 nums[i] == nums[j] 且 abs(i - j) <= k 。如果存在，返回 true ；否则，返回 false 。
@@ -34,6 +39,15 @@ public class ContainsNearbyDuplicate {
             }
         }
         return false;
+    }
+
+    @Test
+    public void testCase() throws Exception {
+        int[] nums = new int[]{1, 2, 3, 4, 5};
+        assertFalse(containsNearbyDuplicate(nums, 3));
+
+        int[] nums2 = new int[]{1, 2, 3, 1};
+        assertTrue(containsNearbyDuplicate(nums2, 3));
     }
 
 }

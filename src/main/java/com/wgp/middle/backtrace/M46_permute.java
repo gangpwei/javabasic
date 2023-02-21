@@ -31,7 +31,7 @@ public class M46_permute {
             lists.add(new ArrayList(list));
             return;
         }
-        for (int i = 0; i < used.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (!used[i]) {
                 list.add(nums[i]);
                 used[i] = true;

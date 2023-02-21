@@ -24,9 +24,8 @@ public class MyQueue<E> {
      * @param obj
      */
     public void offer(E obj) {
+        lock.lock();
         try {
-            lock.lock();
-
             System.out.println("入队列：" + obj);
 
             //入栈之前，把出栈队列的元素还原回来
@@ -46,9 +45,8 @@ public class MyQueue<E> {
      * @return
      */
     public E poll() {
+        lock.lock();
         try {
-            lock.lock();
-
             //出栈前，把入栈元素倒排放到出栈
             while (!inStack.empty()) {
                 outStack.push(inStack.pop());

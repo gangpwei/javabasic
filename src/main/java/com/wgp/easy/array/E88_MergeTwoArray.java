@@ -5,11 +5,11 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
- * ºÏ²¢ÓÐÐòÊý×é
- * Î²²¿É¨ÃèÈ¡×î´óÖµ£¬·ÅÈëÔ­Êý×é
- * ´Ó2¸öÊý×é×Ü³¤¶È¿ªÊ¼±éÀú
+ * åˆå¹¶æœ‰åºæ•°ç»„
+ * å°¾éƒ¨æ‰«æå–æœ€å¤§å€¼ï¼Œæ”¾å…¥åŽŸæ•°ç»„
+ * ä»Ž2ä¸ªæ•°ç»„æ€»é•¿åº¦å¼€å§‹éåŽ†
  * @author weigangpeng
- * @date 2018/01/21 ÉÏÎç11:24
+ * @date 2018/01/21 ä¸Šåˆ11:24
  */
 
 public class E88_MergeTwoArray {
@@ -27,7 +27,7 @@ public class E88_MergeTwoArray {
         }
 
         int storeIndex = m + n - 1;
-        //×¢Òâ±ß½ç£¬>= 0
+        //æ³¨æ„è¾¹ç•Œï¼Œ>= 0
         while(storeIndex >= 0 && (index1 >= 0 || index2 >= 0)){
             if(index1 <0){
                 nums1[storeIndex] = nums2[index2];

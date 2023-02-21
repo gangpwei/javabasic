@@ -1,5 +1,9 @@
 package com.wgp.easy;
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 /**
  * 移除元素
  * @author gangpeng.wgp
@@ -23,5 +27,11 @@ public class E27_RemoveElement {
             }
         }
         return slow;
+    }
+
+    @Test
+    public void testCase() throws Exception {
+        assertEquals(removeElement(new int[]{1,2,3,4,2,2}, 2), 3);
+        assertEquals(removeElement(new int[]{1,2,3,4,5,2}, 2), 4);
     }
 }

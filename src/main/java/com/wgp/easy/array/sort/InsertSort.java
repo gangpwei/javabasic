@@ -5,20 +5,20 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
- * ²åÈëÅÅĞò
+ * æ’å…¥æ’åº
  *
  * @author gangpeng.wgp
- * @date 2023/1/7 ÏÂÎç4:31
+ * @date 2023/1/7 ä¸‹åˆ4:31
  */
 public class InsertSort {
 
     public void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            //»ù×¼Î»µÄÖµ
+            //åŸºå‡†ä½çš„å€¼
             int tmp = array[i];
             int j = i - 1;
             for (; j >= 0; j--) {
-                //µ±Ç°Öµ´óÓÚ»ù×¼Î», ÏòºóÒÆ¶¯Ò»Î»
+                //å½“å‰å€¼å¤§äºåŸºå‡†ä½, å‘åç§»åŠ¨ä¸€ä½
                 if (array[j] > tmp) {
                     array[j + 1] = array[j];
                 } else {

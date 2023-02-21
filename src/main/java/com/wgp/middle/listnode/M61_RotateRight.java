@@ -33,7 +33,7 @@ public class M61_RotateRight {
         x.next = head;
 
         //链表移动n次，会还原；
-        //注意：移动y次，链表的头节点是 n - y，而不是 y
+        //注意：移动k次，链表的头节点是 n - k，而不是 k
         int add = n - k % n;
 
         while(add -- > 0){

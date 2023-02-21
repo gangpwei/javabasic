@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * 柠檬找零
+ * 鏌犳鎵鹃浂
  * @author gangpeng.wgp
- * @date 2022/12/2 上午1:18
+ * @date 2022/12/2 涓婂崍1:18
  */
 public class LemonChange {
     /**
-     * 使用快慢指针
+     * 浣跨敤蹇參鎸囬拡
      * @param nums
      * @return
      */

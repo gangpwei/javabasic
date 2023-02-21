@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * É¾³ıÓĞĞòÊı×éÖĞµÄÖØ¸´Ïî
+ * åˆ é™¤æœ‰åºæ•°ç»„ä¸­çš„é‡å¤é¡¹
  * @author gangpeng.wgp
- * @date 2022/12/2 ÉÏÎç1:18
+ * @date 2022/12/2 ä¸Šåˆ1:18
  */
 public class E26_removeDuplicates {
     /**
-     * Ê¹ÓÃ¿ìÂıÖ¸Õë
+     * ä½¿ç”¨å¿«æ…¢æŒ‡é’ˆ
      * @param nums
      * @return
      */
@@ -18,10 +18,10 @@ public class E26_removeDuplicates {
         if(nums.length == 1){
             return 1;
         }
-        //×¢Òâ£ºslow ºÍ iµÄÆğÊ¼Î»ÖÃ¶¼ÊÇ1
+        //æ³¨æ„ï¼šslow å’Œ içš„èµ·å§‹ä½ç½®éƒ½æ˜¯1
         int slow = 1;
         for(int i =1; i< nums.length; i++){
-            //µ±Ç°ÖµºÍÇ°Ò»¸öÖµ²»ÏàµÈ£¬ÂıÖ¸ÕëÏòºóÒÆ¶¯Ò»Î»
+            //å½“å‰å€¼å’Œå‰ä¸€ä¸ªå€¼ä¸ç›¸ç­‰ï¼Œæ…¢æŒ‡é’ˆå‘åç§»åŠ¨ä¸€ä½
             if(nums[i] != nums[i-1]){
                 nums[slow] = nums[i];
                 slow ++;

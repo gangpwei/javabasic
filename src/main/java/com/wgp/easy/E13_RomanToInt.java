@@ -2,6 +2,10 @@ package com.wgp.easy;
 
 import java.util.HashMap;
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 /**
  *  罗马数字转整数
  * @author : gangpeng.wgp
@@ -23,6 +27,8 @@ public class E13_RomanToInt {
         if(s == null){
             return result;
         }
+        //注意：需要考虑 组合的情况，例如：IV = 5
+        //从字符串的尾部开始遍历，当前字符对应数字 < 上一个字符对应数字，则符号取负数
         int pre = 0;
         for (int i = s.length() - 1; i >= 0 ; i--) {
             int value = map.get(s.charAt(i));
@@ -31,5 +37,14 @@ public class E13_RomanToInt {
             pre = value;
         }
         return result;
+    }
+
+    @Test
+    public void testIntToRoman() {
+        E13_RomanToInt test = new E13_RomanToInt();
+        assertEquals(test.romanToInt("III"), 3);
+        assertEquals(test.romanToInt("IV"), 4);
+        assertEquals( test.romanToInt("LVIII"), 58);
+
     }
 }

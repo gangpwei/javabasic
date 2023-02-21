@@ -6,20 +6,20 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Èý½ÇÐÎµÄ×î´óÖÜ³¤
+ * ä¸‰è§’å½¢çš„æœ€å¤§å‘¨é•¿
  *
- * ¸ø¶¨ÓÉÒ»Ð©ÕýÊý£¨´ú±í³¤¶È£©×é³ÉµÄÊý×é nums £¬·µ»Ø ÓÉÆäÖÐÈý¸ö³¤¶È×é³ÉµÄ¡¢Ãæ»ý²»ÎªÁãµÄÈý½ÇÐÎµÄ×î´óÖÜ³¤ ¡£
- * Èç¹û²»ÄÜÐÎ³ÉÈÎºÎÃæ»ý²»ÎªÁãµÄÈý½ÇÐÎ£¬·µ»Ø 0¡£
+ * ç»™å®šç”±ä¸€äº›æ­£æ•°ï¼ˆä»£è¡¨é•¿åº¦ï¼‰ç»„æˆçš„æ•°ç»„ nums ï¼Œè¿”å›ž ç”±å…¶ä¸­ä¸‰ä¸ªé•¿åº¦ç»„æˆçš„ã€é¢ç§¯ä¸ä¸ºé›¶çš„ä¸‰è§’å½¢çš„æœ€å¤§å‘¨é•¿ ã€‚
+ * å¦‚æžœä¸èƒ½å½¢æˆä»»ä½•é¢ç§¯ä¸ä¸ºé›¶çš„ä¸‰è§’å½¢ï¼Œè¿”å›ž 0ã€‚
  *
  * @author gangpeng.wgp
- * @date 2023/1/2 ÉÏÎç11:09
+ * @date 2023/1/2 ä¸Šåˆ11:09
  */
 public class E976_largestPerimeter {
     public int largestPerimeter(int[] nums) {
         Arrays.sort(nums);
 
         for (int i = nums.length - 1; i >= 2; i--) {
-            //×î³¤±ßÐ¡ÓÚ£¬ÁíÍâ2±ßÖ®ºÍ
+            //æœ€é•¿è¾¹å°äºŽï¼Œå¦å¤–2è¾¹ä¹‹å’Œ
             if(nums[i] < nums[i-1] + nums[i-2]){
                 return nums[i] + nums[i-1] + nums[i-2];
             }

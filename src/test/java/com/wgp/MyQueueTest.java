@@ -15,7 +15,7 @@ import org.junit.Test;
  * @author gangpeng.wgp
  * @date 2022/11/22 上午10:29
  */
-public class MyQueueTest extends TestCase {
+public class MyQueueTest  {
 
     @Test
     public void testPoll() {
@@ -77,7 +77,7 @@ public class MyQueueTest extends TestCase {
         }
 
 
-        System.out.println("====队列元素");
+        //System.out.println("====队列元素");
         while(!queue.isEmpty()) {
             queue.poll();
         }

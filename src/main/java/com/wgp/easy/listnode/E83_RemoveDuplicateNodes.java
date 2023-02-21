@@ -35,8 +35,8 @@ public class E83_RemoveDuplicateNodes {
         node1.printListNode();
 
         ListNode result =null;
-        //result = new E83_RemoveDuplicateNodes().removeDuplicateNodes(node1);
-        //result.printListNode();
+        result = new E83_RemoveDuplicateNodes().removeDuplicateNodes(node1);
+        result.printListNode();
 
         int[] nums2 = {1,1,2,3,3};
         result = new E83_RemoveDuplicateNodes().removeDuplicateNodes(ListNode.getListNode(nums2));

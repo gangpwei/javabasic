@@ -50,7 +50,6 @@ public class E257_TreeAllPath {
         for (String path : pathList) {
             System.out.println(path);
         }
-        //Assert.assertTrue();
     }
 
     @Test

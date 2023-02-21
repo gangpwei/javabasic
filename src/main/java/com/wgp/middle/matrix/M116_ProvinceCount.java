@@ -27,6 +27,7 @@ public class M116_ProvinceCount {
         //省份数量
         int provinceCnt = 0;
         for (int i = 0; i < citys; i++) {
+            //当前城市，没有被访问过，就是一个新的省
             if(!visited[i]){
                 //与第i个城市相连的所有城市都打标，并递归的遍历间接相连的城市
                 dfs(i, citys,  visited, isConnected);
@@ -48,7 +49,10 @@ public class M116_ProvinceCount {
     private void dfs(int i, int citys, boolean[] visited, int[][] isConnected) {
         for (int j = 0; j < citys; j++) {
             if(isConnected[i][j] == 1 && !visited[j]){
+                //把和citys[i]直接相连的城市，都标记已访问
                 visited[j] = true;
+
+                //把和citys[i]间接相连的城市，都标记已访问
                 dfs(j, citys, visited, isConnected);
             }
         }

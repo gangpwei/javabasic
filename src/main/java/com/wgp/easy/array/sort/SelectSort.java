@@ -5,10 +5,10 @@ import java.util.Arrays;
 import org.junit.Test;
 
 /**
- * Ñ¡ÔñÅÅĞò
+ * é€‰æ‹©æ’åº
  *
  * @author gangpeng.wgp
- * @date 2023/1/7 ÏÂÎç4:31
+ * @date 2023/1/7 ä¸‹åˆ4:31
  */
 public class SelectSort {
 
@@ -17,7 +17,7 @@ public class SelectSort {
             int j = i;
             int minIndex = j;
             for (; j < array.length; j++) {
-                //È¡×îĞ¡Öµ
+                //å–æœ€å°å€¼
                 if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
@@ -29,7 +29,7 @@ public class SelectSort {
     }
 
     /**
-     * ½»»»2ÊıÎ»ÖÃ
+     * äº¤æ¢2æ•°ä½ç½®
      *
      * @param array
      * @param indexA

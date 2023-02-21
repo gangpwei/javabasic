@@ -1,11 +1,13 @@
 package com.wgp.middle.num;
 
+import org.junit.Test;
+
 /**
  * 整数转罗马数字
  * @author : gangpeng.wgp
  * @date : 2022/12/4
  */
-class M12_intToRoman {
+public class M12_intToRoman {
     int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
     String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
@@ -30,5 +32,11 @@ class M12_intToRoman {
             }
         }
         return roman.toString();
+    }
+
+    @Test
+    public void testCase() throws Exception {
+        String s = intToRoman(2911);
+        System.out.println(s);
     }
 }

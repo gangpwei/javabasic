@@ -55,4 +55,20 @@ public class E112_HasPathSum {
         return false;
     }
 
+    /**
+     * �ݹ鷨
+     * @param root
+     * @param sum
+     * @return
+     */
+    public boolean hasPathSum2(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+        if (root.left == null && root.right == null) {
+            return sum == root.val;
+        }
+        return hasPathSum2(root.left, sum - root.val) || hasPathSum2(root.right, sum - root.val);
+    }
+
 }

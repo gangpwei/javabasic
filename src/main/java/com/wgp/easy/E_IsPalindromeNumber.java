@@ -2,17 +2,18 @@ package com.wgp.easy;
 
 /**
  * @author gangpeng.wgp
- * @date 2022/12/2 ÉÏÎç12:20
+ * @date 2022/12/2 ä¸Šåˆ12:20
  */
 public class E_IsPalindromeNumber {
     public boolean isPalindrome(int x) {
-        if(x < 0 || (x % 10 == 0 && x != 0)){
+        //å°äº0ï¼Œæˆ–è€…0ç»“å°¾çš„ï¼Œç›´æ¥è¿”å›
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;
         }
-        //°ÑÊı×Ö·´×ªÒ»°ë£¬ÔÙÅĞ¶ÏÊÇ·ñºÍÊ£ÏÂµÄÒ»°ëÏàµÈ
-        int revertNum = 0 ;
-        //·´×ªÒ»°ëµÄÌõ¼ş£¬Ê£ÏÂµÄÒ»°ëÒª±ÈÒÑ¾­·´×ªµÄ´ó
-        while(x > revertNum){
+        //æŠŠæ•°å­—åè½¬ä¸€åŠï¼Œå†åˆ¤æ–­æ˜¯å¦å’Œå‰©ä¸‹çš„ä¸€åŠç›¸ç­‰
+        int revertNum = 0;
+        //åè½¬ä¸€åŠçš„æ¡ä»¶ï¼Œå‰©ä¸‹çš„ä¸€åŠè¦æ¯”å·²ç»åè½¬çš„å¤§
+        while (x > revertNum) {
             revertNum = revertNum * 10 + x % 10;
             x = x / 10;
         }

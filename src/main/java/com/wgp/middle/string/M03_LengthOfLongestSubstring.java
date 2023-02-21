@@ -3,6 +3,11 @@ package com.wgp.middle.string;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.apache.commons.lang.StringUtils;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 /**
  * 最长无重复字符串
  * @author gangpeng.wgp
@@ -35,5 +40,32 @@ public class M03_LengthOfLongestSubstring {
             max = Math.max(max, rk - i);
         }
         return max;
+    }
+
+
+    public int getSubStr(String str) {
+        if (StringUtils.isBlank(str)) {
+            return 0;
+        }
+        Set<Character> set = new HashSet<>();
+        int left = 0, right = 0, max = 0;
+        while(right < str.length()){
+            Character c = str.charAt(right);
+            while(set.contains(c)){
+                set.remove(str.charAt(left));
+                left++;
+            }
+            set.add(c);
+            right ++;
+            max = Math.max(max, right - left);
+        }
+        return max;
+    }
+
+    @Test
+    public void testCase() throws Exception {
+        assertEquals(getSubStr("abccd"), 3);
+        assertEquals(getSubStr("abcabddd"), 4);
+        assertEquals(getSubStr("aa"), 1);
     }
 }
