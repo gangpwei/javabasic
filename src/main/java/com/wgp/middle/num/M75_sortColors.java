@@ -1,15 +1,15 @@
 package com.wgp.middle.num;
 
 /**
- * ÑÕÉ«·ÖÀà
+ * é¢œè‰²åˆ†ç±»
  * @author : gangpeng.wgp
  * @date : 2022/12/4
  */
 class M75_sortColors {
 
-    //¸ø¶¨Ò»¸ö°üº¬ºìÉ«¡¢°×É«ºÍÀ¶É«¡¢¹²?n ¸öÔªËØµÄÊý×é?nums?£¬Ô­µØ¶ÔËüÃÇ½øÐÐÅÅÐò£¬Ê¹µÃÏàÍ¬ÑÕÉ«µÄÔªËØÏàÁÚ£¬²¢°´ÕÕºìÉ«¡¢°×É«¡¢À¶É«Ë³ÐòÅÅÁÐ¡£
+    //ç»™å®šä¸€ä¸ªåŒ…å«çº¢è‰²ã€ç™½è‰²å’Œè“è‰²ã€å…±?n ä¸ªå…ƒç´ çš„æ•°ç»„?nums?ï¼ŒåŽŸåœ°å¯¹å®ƒä»¬è¿›è¡ŒæŽ’åºï¼Œä½¿å¾—ç›¸åŒé¢œè‰²çš„å…ƒç´ ç›¸é‚»ï¼Œå¹¶æŒ‰ç…§çº¢è‰²ã€ç™½è‰²ã€è“è‰²é¡ºåºæŽ’åˆ—ã€‚
     //
-    //ÎÒÃÇÊ¹ÓÃÕûÊý 0¡¢?1 ºÍ 2 ·Ö±ð±íÊ¾ºìÉ«¡¢°×É«ºÍÀ¶É«¡£
+    //æˆ‘ä»¬ä½¿ç”¨æ•´æ•° 0ã€?1 å’Œ 2 åˆ†åˆ«è¡¨ç¤ºçº¢è‰²ã€ç™½è‰²å’Œè“è‰²ã€‚
 
     /**
      *
@@ -18,14 +18,14 @@ class M75_sortColors {
     public void sortColors(int[] nums) {
         int n = nums.length;
         int ptr = 0;
-        //°Ñ0ÒÆµ½×îÇ°Ãæ
+        //æŠŠ0ç§»åˆ°æœ€å‰é¢
         for (int i = 0; i < n; ++i) {
             if (nums[i] == 0) {
                 ptr = swap(nums, ptr, i);
             }
         }
 
-        //°Ñ1ÒÆµ½oµÄºóÃæ
+        //æŠŠ1ç§»åˆ°oçš„åŽé¢
         for (int i = ptr; i < n; ++i) {
             if (nums[i] == 1) {
                 ptr = swap(nums, ptr, i);

@@ -9,7 +9,7 @@ import org.junit.Test;
 import util.TreeNode;
 
 /**
- * ¶ş²æÊ÷µÄ²ãĞò±éÀú
+ * äºŒå‰æ ‘çš„å±‚åºéå†
  * @author : gangpeng.wgp
  * @date : 2022/11/16
  */
@@ -21,20 +21,20 @@ public class M102_levelOrder {
         }
 
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        //²åÈë¸ù½Úµã£¬offer ºÍ add µÄÇø±ğ£ºoffer ²»Å×Òì³££¬·µ»Øfalse; add »áÅ×Òì³£
+        //æ’å…¥æ ¹èŠ‚ç‚¹ï¼Œoffer å’Œ add çš„åŒºåˆ«ï¼šoffer ä¸æŠ›å¼‚å¸¸ï¼Œè¿”å›false; add ä¼šæŠ›å¼‚å¸¸
         queue.offer(root);
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<Integer>();
             int currentLevelSize = queue.size();
 
-            //Ã¿Ò»²ã±éÀú£¬°Ñµ±Ç°½ÚµãµÄÖµ·Åµ½½á¹ûÀï£¬ÔÙ°Ñ2¸ö×Ó½Úµã·Åµ½¶ÓÁĞÀï
+            //æ¯ä¸€å±‚éå†ï¼ŒæŠŠå½“å‰èŠ‚ç‚¹çš„å€¼æ”¾åˆ°ç»“æœé‡Œï¼Œå†æŠŠ2ä¸ªå­èŠ‚ç‚¹æ”¾åˆ°é˜Ÿåˆ—é‡Œ
             for (int i = 1; i <= currentLevelSize; ++i) {
                 TreeNode node = queue.poll();
 
-                //°Ñµ±Ç°½ÚµãµÄÖµ·Åµ½²ã¼¶Àï
+                //æŠŠå½“å‰èŠ‚ç‚¹çš„å€¼æ”¾åˆ°å±‚çº§é‡Œ
                 level.add(node.val);
 
-                //°Ñµ±Ç°½ÚµãµÄ2¸ö×Ó½Úµã·Åµ½¶ÓÁĞÀï
+                //æŠŠå½“å‰èŠ‚ç‚¹çš„2ä¸ªå­èŠ‚ç‚¹æ”¾åˆ°é˜Ÿåˆ—é‡Œ
                 if (node.left != null) {
                     queue.offer(node.left);
                 }

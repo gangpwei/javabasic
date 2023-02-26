@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 /**
  * ½»Ìæ´òÓ¡ FooBar N´Î
  */
-class E1115_FooBar {
+public class E1115_FooBar {
     private int n;
 
     private Semaphore fooSema = new Semaphore(1);

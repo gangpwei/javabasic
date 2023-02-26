@@ -7,12 +7,12 @@ import util.TreeNode;
 
 /**
  * @author gangpeng.wgp
- * @date 2022/12/1 ÏÂÎç9:00
+ * @date 2022/12/1 ä¸‹åˆ9:00
  */
 public class E112_HasPathSum {
 
     /**
-     * ¹ã¶ÈÓÅÏÈ
+     * å¹¿åº¦ä¼˜å…ˆ
      *
      * @param root
      * @param sum
@@ -26,15 +26,15 @@ public class E112_HasPathSum {
             return sum == root.val;
         }
 
-        //2¸ö¶ÓÁĞÒ»Ò»¶ÔÓ¦£¬Ò»¸ö´æ½Úµã£¬Ò»¸ö´æ½Úµã¶ÔÓ¦µÄÀÛ¼ÓºÍ
+        //2ä¸ªé˜Ÿåˆ—ä¸€ä¸€å¯¹åº”ï¼Œä¸€ä¸ªå­˜èŠ‚ç‚¹ï¼Œä¸€ä¸ªå­˜èŠ‚ç‚¹å¯¹åº”çš„ç´¯åŠ å’Œ
         Deque<TreeNode> queNode = new LinkedList<>();
         Deque<Integer> queVal = new LinkedList<>();
         queNode.offer(root);
         queVal.offer(root.val);
         while (!queNode.isEmpty()){
-            //µ±Ç°½Úµã
+            //å½“å‰èŠ‚ç‚¹
             TreeNode now = queNode.poll();
-            //µ±Ç°½Úµã¶ÔÓ¦µÄÀÛ¼ÓºÍ
+            //å½“å‰èŠ‚ç‚¹å¯¹åº”çš„ç´¯åŠ å’Œ
             int temp = queVal.poll();
             if(now.left == null && now.right == null){
                 if(temp == sum){
@@ -56,7 +56,7 @@ public class E112_HasPathSum {
     }
 
     /**
-     * µİ¹é·¨
+     * é€’å½’æ³•
      * @param root
      * @param sum
      * @return

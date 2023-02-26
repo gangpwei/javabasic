@@ -6,9 +6,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * ÇóÊı×éÖĞĞÄÏÂ±ê£¬×ó±ßºÍµÈÓÚÓÒ±ßºÍ
+ * æ±‚æ•°ç»„ä¸­å¿ƒä¸‹æ ‡ï¼Œå·¦è¾¹å’Œç­‰äºå³è¾¹å’Œ
  * @author gangpeng.wgp
- * @date 2022/12/2 ÉÏÎç1:18
+ * @date 2022/12/2 ä¸Šåˆ1:18
  */
 public class CenterIndex {
     /**
@@ -20,13 +20,13 @@ public class CenterIndex {
         if(nums.length == 1){
             return 1;
         }
-        //ËùÓĞÔªËØÖ®ºÍ
+        //æ‰€æœ‰å…ƒç´ ä¹‹å’Œ
         int sum = Arrays.stream(nums).sum();
 
         int total = 0;
         for(int i =0; i< nums.length; i++){
-            //   ×ó±ßÔªËØÖ®ºÍ == ÓÒ±ßÔªËØÖ®ºÍ + µ±Ç°ÔªËØ = ×ÜºÍ
-            //=¡·×ó±ßÔªËØÖ®ºÍ * 2 + µ±Ç°ÔªËØ = ×ÜºÍ
+            //   å·¦è¾¹å…ƒç´ ä¹‹å’Œ == å³è¾¹å…ƒç´ ä¹‹å’Œ + å½“å‰å…ƒç´  = æ€»å’Œ
+            //=ã€‹å·¦è¾¹å…ƒç´ ä¹‹å’Œ * 2 + å½“å‰å…ƒç´  = æ€»å’Œ
             if(total * 2 + nums[i] == sum){
                 return i;
             }

@@ -25,7 +25,7 @@ public class M649_Dota2 {
             int rPoll = rQueue.poll();
             int dPoll = dQueue.poll();
             if(rPoll < dPoll){
-                //注意：元素放到队尾，下标需要加length，为了不影响本轮比对
+                //娉ㄦ剰锛氬厓绱犳斁鍒伴槦灏撅紝涓嬫爣闇�瑕佸姞length锛屼负浜嗕笉褰卞搷鏈疆姣斿
                 rQueue.offer(rPoll + length);
             }else{
                 dQueue.offer(dPoll + length);

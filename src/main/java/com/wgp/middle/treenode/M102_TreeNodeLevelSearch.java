@@ -7,7 +7,7 @@ import java.util.List;
 import util.TreeNode;
 
 /**
- * ¶ş²æÊ÷µÄ²ãĞò±éÀú
+ * äºŒå‰æ ‘çš„å±‚åºéå†
  * @author : gangpeng.wgp
  * @date : 2022/12/4
  */
@@ -22,7 +22,7 @@ class M102_TreeNodeLevelSearch {
         que.offer(root);
         while(!que.isEmpty()){
             List<Integer> levelList = new ArrayList<Integer>();
-            //×¢Òâ£¬ÕâÀïÎ¬»¤ÁËÒ»¸öµ±Ç°²ã½ÚµãÊıÁ¿µÄ±äÁ¿£¬ÓÃÓÚºóÃæµÄ±éÀú
+            //æ³¨æ„ï¼Œè¿™é‡Œç»´æŠ¤äº†ä¸€ä¸ªå½“å‰å±‚èŠ‚ç‚¹æ•°é‡çš„å˜é‡ï¼Œç”¨äºåé¢çš„éå†
             int currentLevelSize = que.size();
             while(currentLevelSize > 0){
                 currentLevelSize --;

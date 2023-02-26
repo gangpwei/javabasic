@@ -4,14 +4,14 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * x µÄÆ½·½¸ù
+ * x çš„å¹³æ–¹æ ¹
  * @author gangpeng.wgp
- * @date 2023/1/1 ÏÂÎç1:22
+ * @date 2023/1/1 ä¸‹åˆ1:22
  */
 public class E69_sqrt {
 
     /**
-     * ¶ş·Ö·¨
+     * äºŒåˆ†æ³•
      * @param x
      * @return
      */

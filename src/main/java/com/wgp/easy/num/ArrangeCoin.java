@@ -4,16 +4,16 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Ó²±ÒÅÅÁĞ
- * µÚNĞĞÅÅN¸öÓ²±Ò£¬×î¶à¿ÉÒÔÅÅ¶àÉÙĞĞ
+ * ç¡¬å¸æ’åˆ—
+ * ç¬¬Nè¡Œæ’Nä¸ªç¡¬å¸ï¼Œæœ€å¤šå¯ä»¥æ’å¤šå°‘è¡Œ
  *
  * @author gangpeng.wgp
- * @date 2023/1/1 ÏÂÎç4:23
+ * @date 2023/1/1 ä¸‹åˆ4:23
  */
 public class ArrangeCoin {
 
     /**
-     * ¶ş·Ö²éÕÒ
+     * äºŒåˆ†æŸ¥æ‰¾
      *
      * @param n
      * @return
@@ -22,7 +22,7 @@ public class ArrangeCoin {
         int l = 0, r = n;
         while (l <= r) {
             int mid = l + (r - l) / 2;
-            //ºÄ·ÑÓ²±Ò×ÜÊı = 1 + 2 + 3 + ... x = (xÆ½·½ + x) / 2
+            //è€—è´¹ç¡¬å¸æ€»æ•° = 1 + 2 + 3 + ... x = (xå¹³æ–¹ + x) / 2
             int cost = (mid * mid + mid) / 2;
             if (cost == n) {
                 return mid;

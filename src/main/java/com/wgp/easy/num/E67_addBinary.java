@@ -1,7 +1,7 @@
 package com.wgp.easy.num;
 
 /**
- * ¶þ½øÖÆÇóºÍ
+ * äºŒè¿›åˆ¶æ±‚å’Œ
  *
  * @author : gangpeng.wgp
  * @date : 2022/12/3
@@ -12,10 +12,10 @@ public class E67_addBinary {
 
         int n = Math.max(a.length(), b.length()), carry = 0;
         for (int i = 0; i < n; ++i) {
-            //·Ö±ðºÍ2¸öÊýÏà¼Ó
+            //åˆ†åˆ«å’Œ2ä¸ªæ•°ç›¸åŠ 
             carry += i < a.length() ? (a.charAt(a.length() - 1 - i) - '0') : 0;
             carry += i < b.length() ? (b.charAt(b.length() - 1 - i) - '0') : 0;
-            //¶Ô½á¹ûÈ¡Óà
+            //å¯¹ç»“æžœå–ä½™
             ans.append((char)(carry % 2 + '0'));
             carry /= 2;
         }

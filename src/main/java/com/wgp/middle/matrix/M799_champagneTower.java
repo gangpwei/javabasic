@@ -4,26 +4,26 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * ÏãéÄËş
- * ÇóµÚxĞĞµÚyÁĞ±­×Ó×°ÁË¶àÉÙ¾Æ
+ * é¦™æ§Ÿå¡”
+ * æ±‚ç¬¬xè¡Œç¬¬yåˆ—æ¯å­è£…äº†å¤šå°‘é…’
  * @author gangpeng.wgp
- * @date 2023/1/2 ÏÂÎç5:01
+ * @date 2023/1/2 ä¸‹åˆ5:01
  */
 public class M799_champagneTower {
     public double champagneTower(int poured, int query_row, int query_glass) {
-        //Ã¿¸öÎ»ÖÃÔÚÒç³öÇ°µÄ×ÜÈİÁ¿
+        //æ¯ä¸ªä½ç½®åœ¨æº¢å‡ºå‰çš„æ€»å®¹é‡
         double[][] capacity = new double[100][100];
         capacity[0][0] = poured;
         for (int i = 0; i < query_row; i++) {
-            //×¢Òâ£ºj ½áÊøµÄÎ»ÖÃÊÇ i
+            //æ³¨æ„ï¼šj ç»“æŸçš„ä½ç½®æ˜¯ i
             for (int j = 0; j <= i ; j++) {
-                //¸øÏÂÃæ2±­Òç³öµÄ¾Æ
+                //ç»™ä¸‹é¢2æ¯æº¢å‡ºçš„é…’
                 double yichu = (capacity[i][j] - 1.0) / 2;
                 if(yichu > 0){
-                    //×óÏÂ½Ç
+                    //å·¦ä¸‹è§’
                     capacity[i + 1][j] += yichu;
 
-                    //ÓÒÏÂ½Ç
+                    //å³ä¸‹è§’
                     capacity[i + 1][j+1] += yichu;
                 }
             }

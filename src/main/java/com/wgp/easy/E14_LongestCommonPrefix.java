@@ -41,5 +41,7 @@ public class E14_LongestCommonPrefix {
         result = longestCommonPrefix(new String[]{"dog","racecar","car"});
         Assert.assertTrue(result.equals(""));
 
+        result = longestCommonPrefix(new String[]{"flower", "flow", "flowab"});
+        Assert.assertTrue(result.equals("flow"));
     }
 }

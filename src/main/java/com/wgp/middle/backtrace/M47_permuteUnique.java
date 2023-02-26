@@ -7,14 +7,14 @@ import java.util.List;
 import org.junit.Test;
 
 /**
- * È«ÅÅÁĞ
+ * å…¨æ’åˆ—
  *
  * @author : gangpeng.wgp
  * @date : 2022/12/5
  */
 public class M47_permuteUnique {
 
-    //¸ø¶¨Ò»¸ö²»º¬ÖØ¸´Êı×ÖµÄÊı×é nums £¬·µ»ØÆä ËùÓĞ¿ÉÄÜµÄÈ«ÅÅÁĞ ¡£Äã¿ÉÒÔ °´ÈÎÒâË³Ğò ·µ»Ø´ğ°¸¡£
+    //ç»™å®šä¸€ä¸ªä¸å«é‡å¤æ•°å­—çš„æ•°ç»„ nums ï¼Œè¿”å›å…¶ æ‰€æœ‰å¯èƒ½çš„å…¨æ’åˆ— ã€‚ä½ å¯ä»¥ æŒ‰ä»»æ„é¡ºåº è¿”å›ç­”æ¡ˆã€‚
 
     private List<List<Integer>> lists = new ArrayList<>();
 
@@ -34,7 +34,7 @@ public class M47_permuteUnique {
             return;
         }
         for (int i = 0; i < used.length; i++) {
-            //ÕâÀïÅĞ¶Ïµ±Ç°ÖµºÍÇ°Ò»¸öÖµÊÇ·ñÏàÍ¬£¬²¢ÇÒÅĞ¶ÏÕâ¸öÖØ¸´µÄÔªËØÊÇ·ñÊ¹ÓÃ¹ı
+            //è¿™é‡Œåˆ¤æ–­å½“å‰å€¼å’Œå‰ä¸€ä¸ªå€¼æ˜¯å¦ç›¸åŒï¼Œå¹¶ä¸”åˆ¤æ–­è¿™ä¸ªé‡å¤çš„å…ƒç´ æ˜¯å¦ä½¿ç”¨è¿‡
             if(used[i] ||(i > 0 && nums[i] == nums[i-1] && used[i - 1])){
                 continue;
             }

@@ -5,7 +5,7 @@ import org.junit.Test;
 import util.TreeNode;
 
 /**
- * 判断它是否是高度平衡的二叉树
+ * 鍒ゆ柇瀹冩槸鍚︽槸楂樺害骞宠　鐨勪簩鍙夋爲
  * @author gangpeng.wgp
  * @date 2022/5/30 10:21 PM
  */

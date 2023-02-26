@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Çóì³²¨ÄÇÆõÊıÁĞµÄµÚNÎ»
+ * æ±‚æ–æ³¢é‚£å¥‘æ•°åˆ—çš„ç¬¬Nä½
  * @author gangpeng.wgp
- * @date 2023/1/1 ÏÂÎç4:23
+ * @date 2023/1/1 ä¸‹åˆ4:23
  */
 public class Feibonaqie {
 

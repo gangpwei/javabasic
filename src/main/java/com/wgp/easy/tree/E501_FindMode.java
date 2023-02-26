@@ -8,7 +8,7 @@ import org.junit.Test;
 import util.TreeNode;
 
 /**
- * ¶ş²æËÑË÷Ê÷ÖĞµÄÖÚÊı
+ * äºŒå‰æœç´¢æ ‘ä¸­çš„ä¼—æ•°
  * @author gangpeng.wgp
  * @date 2022/5/30 10:21 PM
  */
@@ -16,7 +16,7 @@ public class E501_FindMode {
     public int[] findMode(TreeNode root) {
         if(root == null) return null;
 
-        //ÖĞĞò±éÀú£¬µÃµ½Ò»¸öÓĞĞòÊı×é
+        //ä¸­åºéå†ï¼Œå¾—åˆ°ä¸€ä¸ªæœ‰åºæ•°ç»„
         List<Integer> midList = mid(root);
         int maxCount = 0;
         int lastVal = 0;

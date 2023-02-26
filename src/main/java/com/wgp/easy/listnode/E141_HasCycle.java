@@ -6,9 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
 /**
- *  环形链表: 判断一个链表是否存在环
+ *  鐜舰閾捐〃: 鍒ゆ柇涓�涓摼琛ㄦ槸鍚﹀瓨鍦ㄧ幆
  * @author gangpeng.wgp
- * @date 2022/12/1 下午10:38
+ * @date 2022/12/1 涓嬪崍10:38
  */
 public class E141_HasCycle {
 
@@ -18,7 +18,7 @@ public class E141_HasCycle {
         }
         ListNode slow = head;
         ListNode fast = head.next;
-        //注意判断快慢指针是否为空
+        //娉ㄦ剰鍒ゆ柇蹇參鎸囬拡鏄惁涓虹┖
         while (slow != null && fast != null && fast.next != null){
             if(slow == fast){
                 return true;

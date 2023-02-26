@@ -5,9 +5,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
 /**
- * 最后一个单词的长度
+ * 鏈�鍚庝竴涓崟璇嶇殑闀垮害
  * @author gangpeng.wgp
- * @date 2022/12/3 下午4:24
+ * @date 2022/12/3 涓嬪崍4:24
  */
 public class E58_LengthOfLastWord {
 

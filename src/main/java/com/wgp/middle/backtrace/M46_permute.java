@@ -6,14 +6,14 @@ import java.util.List;
 import org.junit.Test;
 
 /**
- * È«ÅÅÁĞ
+ * å…¨æ’åˆ—
  *
  * @author : gangpeng.wgp
  * @date : 2022/12/5
  */
 public class M46_permute {
 
-    //¸ø¶¨Ò»¸ö²»º¬ÖØ¸´Êı×ÖµÄÊı×é nums £¬·µ»ØÆä ËùÓĞ¿ÉÄÜµÄÈ«ÅÅÁĞ ¡£Äã¿ÉÒÔ °´ÈÎÒâË³Ğò ·µ»Ø´ğ°¸¡£
+    //ç»™å®šä¸€ä¸ªä¸å«é‡å¤æ•°å­—çš„æ•°ç»„ nums ï¼Œè¿”å›å…¶ æ‰€æœ‰å¯èƒ½çš„å…¨æ’åˆ— ã€‚ä½ å¯ä»¥ æŒ‰ä»»æ„é¡ºåº è¿”å›ç­”æ¡ˆã€‚
 
     private List<List<Integer>> lists = new ArrayList<>();
 

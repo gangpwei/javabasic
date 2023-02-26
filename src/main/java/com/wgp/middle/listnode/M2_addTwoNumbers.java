@@ -3,17 +3,17 @@ package com.wgp.middle.listnode;
 import com.wgp.easy.ListNode;
 
 /**
- * Á½¸öÁ´±íÏà¼Ó
+ * ä¸¤ä¸ªé“¾è¡¨ç›¸åŠ 
  * @author : gangpeng.wgp
  * @date : 2022/12/4
  */
 public class M2_addTwoNumbers {
 
-    //¸øÄãÁ½¸ö?·Ç¿Õ µÄÁ´±í£¬±íÊ¾Á½¸ö·Ç¸ºµÄÕûÊý¡£ËüÃÇÃ¿Î»Êý×Ö¶¼ÊÇ°´ÕÕ?ÄæÐò?µÄ·½Ê½´æ´¢µÄ£¬²¢ÇÒÃ¿¸ö½ÚµãÖ»ÄÜ´æ´¢?Ò»Î»?Êý×Ö¡£
+    //ç»™ä½ ä¸¤ä¸ª?éžç©º çš„é“¾è¡¨ï¼Œè¡¨ç¤ºä¸¤ä¸ªéžè´Ÿçš„æ•´æ•°ã€‚å®ƒä»¬æ¯ä½æ•°å­—éƒ½æ˜¯æŒ‰ç…§?é€†åº?çš„æ–¹å¼å­˜å‚¨çš„ï¼Œå¹¶ä¸”æ¯ä¸ªèŠ‚ç‚¹åªèƒ½å­˜å‚¨?ä¸€ä½?æ•°å­—ã€‚
     //
-    //ÇëÄã½«Á½¸öÊýÏà¼Ó£¬²¢ÒÔÏàÍ¬ÐÎÊ½·µ»ØÒ»¸ö±íÊ¾ºÍµÄÁ´±í¡£
+    //è¯·ä½ å°†ä¸¤ä¸ªæ•°ç›¸åŠ ï¼Œå¹¶ä»¥ç›¸åŒå½¢å¼è¿”å›žä¸€ä¸ªè¡¨ç¤ºå’Œçš„é“¾è¡¨ã€‚
     //
-    //Äã¿ÉÒÔ¼ÙÉè³ýÁËÊý×Ö 0 Ö®Íâ£¬ÕâÁ½¸öÊý¶¼²»»áÒÔ 0?¿ªÍ·¡£
+    //ä½ å¯ä»¥å‡è®¾é™¤äº†æ•°å­— 0 ä¹‹å¤–ï¼Œè¿™ä¸¤ä¸ªæ•°éƒ½ä¸ä¼šä»¥ 0?å¼€å¤´ã€‚
 
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

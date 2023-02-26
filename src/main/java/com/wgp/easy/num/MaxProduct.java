@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * ×î´óµÄ³Ë»ı
+ * æœ€å¤§çš„ä¹˜ç§¯
  * @author gangpeng.wgp
- * @date 2022/12/2 ÉÏÎç1:18
+ * @date 2022/12/2 ä¸Šåˆ1:18
  */
 public class MaxProduct {
     /**
-     * ÏßĞÔÉ¨Ãè
+     * çº¿æ€§æ‰«æ
      * @param nums
      * @return
      */
@@ -29,7 +29,7 @@ public class MaxProduct {
                 max3 = num;
             }
 
-            //×¢Òâ£ººÍÉÏÃæµÄif else ¶Ï¿ª
+            //æ³¨æ„ï¼šå’Œä¸Šé¢çš„if else æ–­å¼€
             if (num < min1) {
                 min2 = min1;
                 min1 = num;
@@ -37,8 +37,8 @@ public class MaxProduct {
                 min2 = num;
             }
         }
-        //³¡¾°1£º×îĞ¡2¸ö¸ºÊı * ×î´óÕıÊı
-        //³¡¾°2£º×î´ó3¸öÕıÊıÏà³Ë
+        //åœºæ™¯1ï¼šæœ€å°2ä¸ªè´Ÿæ•° * æœ€å¤§æ­£æ•°
+        //åœºæ™¯2ï¼šæœ€å¤§3ä¸ªæ­£æ•°ç›¸ä¹˜
         return Math.max(min1 * min2 * max1, max1 * max2 * max3);
     }
 

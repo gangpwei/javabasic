@@ -3,7 +3,7 @@ package com.wgp.easy.num;
 public class E66_plusOne {
     public int[] plusOne(int[] digits) {
         int len = digits.length;
-        //´Ó×îºóÒ»Î»¼Ó1£¬Èç¹ûÃ»ÓĞ½øÎ»Ö±½Ó·µ»Ø
+        //ä»æœ€åä¸€ä½åŠ 1ï¼Œå¦‚æœæ²¡æœ‰è¿›ä½ç›´æ¥è¿”å›
         for (int i = len - 1; i >= 0; i--) {
             digits[i] = (digits[i] + 1) % 10;
             if (digits[i] != 0) {
@@ -11,7 +11,7 @@ public class E66_plusOne {
             }
         }
 
-        //Èç¹ûÈ«²¿¶¼ÊÇ9£¬´´½¨Ò»¸öĞÂµÄÊı×é£¬µÚÒ»Î»ÊÇ1£¬ÆäËû¶¼ÊÇ0
+        //å¦‚æœå…¨éƒ¨éƒ½æ˜¯9ï¼Œåˆ›å»ºä¸€ä¸ªæ–°çš„æ•°ç»„ï¼Œç¬¬ä¸€ä½æ˜¯1ï¼Œå…¶ä»–éƒ½æ˜¯0
         digits = new int[len + 1];
         digits[0] = 1;
         return digits;

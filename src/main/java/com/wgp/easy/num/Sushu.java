@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * ÅĞ¶Ï¸ø¶¨·¶Î§ÄÚÓĞ¶àÉÙ¸öËØÊı
+ * åˆ¤æ–­ç»™å®šèŒƒå›´å†…æœ‰å¤šå°‘ä¸ªç´ æ•°
  * @author gangpeng.wgp
- * @date 2023/1/1 ÏÂÎç12:01
+ * @date 2023/1/1 ä¸‹åˆ12:01
  */
 public class Sushu {
 
@@ -16,7 +16,7 @@ public class Sushu {
         for (int i = 2; i < x; i++) {
             if(!isHeShu[i]){
                 cnt ++;
-                //j´Ó i*i ¿ªÊ¼±éÀú£¬Ğ¡ÓÚ i*iµÄÔÚÖ®Ç°µÄÑ­»·ÖĞÒÔ¼°±éÀú¹ú
+                //jä» i*i å¼€å§‹éå†ï¼Œå°äº i*içš„åœ¨ä¹‹å‰çš„å¾ªç¯ä¸­ä»¥åŠéå†å›½
                 for (int j = i * i; j < x; j += i) {
                     System.out.println(j);
                     isHeShu[j] = true;

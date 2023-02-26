@@ -5,13 +5,13 @@ import java.util.List;
 
 /**
  * @author gangpeng.wgp
- * @date 2022/8/22 8:52 ÏÂÎç
+ * @date 2022/8/22 8:52 ä¸‹åˆ
  */
 public class TreeNodeUtil {
     /**
-     * Êı×é×ªÎª¶ş²æÊ÷
-     * @param arr   ÊäÈëÔ­Ê¼Êı×é
-     * @return  ·µ»Ø¶ş²æÊ÷µÄ¸ú½Úµã
+     * æ•°ç»„è½¬ä¸ºäºŒå‰æ ‘
+     * @param arr   è¾“å…¥åŸå§‹æ•°ç»„
+     * @return  è¿”å›äºŒå‰æ ‘çš„è·ŸèŠ‚ç‚¹
      */
     public static TreeNode arrayToTree(Integer[] arr){
         int len = arr.length;

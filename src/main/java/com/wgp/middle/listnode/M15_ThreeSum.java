@@ -21,14 +21,14 @@ public class M15_ThreeSum {
             pre = pre.next;
         }
 
-        //ÆðÊ¼½Úµã
+        //èµ·å§‹èŠ‚ç‚¹
         ListNode leftNode = pre.next;
         ListNode current = pre;
 
         for(int i =0; i< right - left + 1; i++){
             current = current.next;
         }
-        //ÓÒ½Úµã
+        //å³èŠ‚ç‚¹
         ListNode rightNode = current;
 
         ListNode endNode = rightNode.next;

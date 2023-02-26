@@ -10,30 +10,30 @@ import static org.junit.Assert.assertTrue;
 
 public class ContainsNearbyDuplicate {
 
-    //¸øÄãÒ»¸öÕûÊıÊı×é?nums ºÍÒ»¸öÕûÊı?k £¬ÅĞ¶ÏÊı×éÖĞÊÇ·ñ´æÔÚÁ½¸ö ²»Í¬µÄË÷Òı?i?ºÍ?j £¬Âú×ã nums[i] == nums[j] ÇÒ abs(i - j) <= k ¡£Èç¹û´æÔÚ£¬·µ»Ø true £»·ñÔò£¬·µ»Ø false ¡£
+    //ç»™ä½ ä¸€ä¸ªæ•´æ•°æ•°ç»„?nums å’Œä¸€ä¸ªæ•´æ•°?k ï¼Œåˆ¤æ–­æ•°ç»„ä¸­æ˜¯å¦å­˜åœ¨ä¸¤ä¸ª ä¸åŒçš„ç´¢å¼•?i?å’Œ?j ï¼Œæ»¡è¶³ nums[i] == nums[j] ä¸” abs(i - j) <= k ã€‚å¦‚æœå­˜åœ¨ï¼Œè¿”å› true ï¼›å¦åˆ™ï¼Œè¿”å› false ã€‚
     //
     //
-    //Ê¾Àı?1£º
+    //ç¤ºä¾‹?1ï¼š
     //
-    //ÊäÈë£ºnums = [1,2,3,1], k = 3
-    //Êä³ö£ºtrue
+    //è¾“å…¥ï¼šnums = [1,2,3,1], k = 3
+    //è¾“å‡ºï¼štrue
 
     /**
-     * »¬¶¯´°¿Ú + HashSet
+     * æ»‘åŠ¨çª—å£ + HashSet
      * @param nums
      * @param k
      * @return
      */
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-        //±£´æÃ¿´Î»¬¶¯´°¿Ú³öÏÖµÄÔªËØ
+        //ä¿å­˜æ¯æ¬¡æ»‘åŠ¨çª—å£å‡ºç°çš„å…ƒç´ 
         Set<Integer> set = new HashSet<Integer>();
         int length = nums.length;
         for (int i = 0; i < length; i++) {
-            //Ã¿´Î»¬¶¯´°¿ÚÓÒÒÆ£¬ÒÆ³ıÉÏÒ»¸ö´°¿ÚµÄµÚÒ»¸öÔªËØ
+            //æ¯æ¬¡æ»‘åŠ¨çª—å£å³ç§»ï¼Œç§»é™¤ä¸Šä¸€ä¸ªçª—å£çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
             if (i > k) {
                 set.remove(nums[i - k - 1]);
             }
-            //ÔªËØÖØ¸´
+            //å…ƒç´ é‡å¤
             if (!set.add(nums[i])) {
                 return true;
             }

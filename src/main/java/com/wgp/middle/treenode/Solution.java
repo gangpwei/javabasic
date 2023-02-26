@@ -6,20 +6,20 @@ import java.util.List;
 import util.TreeNode;
 
 /**
- * ������չ��Ϊ����
+ * 二叉树展开为链表
  * @author : gangpeng.wgp
  * @date : 2022/12/7
  */
 class Solution {
 
-    //����������ĸ���� root �����㽫��չ��Ϊһ����������
+    //给你二叉树的根结点 root ，请你将它展开为一个单链表：
     //
-    //չ����ĵ�����Ӧ��ͬ��ʹ�� TreeNode ������ right ��ָ��ָ����������һ����㣬������ָ��ʼ��Ϊ null ��
-    //չ����ĵ�����Ӧ��������� ������� ˳����ͬ��
+    //展开后的单链表应该同样使用 TreeNode ，其中 right 子指针指向链表中下一个结点，而左子指针始终为 null 。
+    //展开后的单链表应该与二叉树 先序遍历 顺序相同。
 
     /**
-     * 1��ǰ������������нڵ�ŵ�List��
-     * 2������List��ǰһ���ڵ���ҽڵ�ָ��ǰ�ڵ㣬�ÿ�ǰһ���ڵ����ڵ�
+     * 1、前序遍历，把所有节点放到List里
+     * 2、遍历List，前一个节点的右节点指向当前节点，置空前一个节点的左节点
      * @param root
      */
     public void flatten(TreeNode root) {

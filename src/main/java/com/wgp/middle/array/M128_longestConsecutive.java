@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * ×î³¤Á¬ĞøĞòÁĞ
+ * æœ€é•¿è¿ç»­åºåˆ—
  * @author : gangpeng.wgp
  * @date : 2022/12/7
  */
@@ -34,11 +34,11 @@ public class M128_longestConsecutive {
         int max = 0;
 
         for (int num : numSet) {
-            //ÕÒµ½Á¬ĞøĞòÁĞµÄÆğµã
+            //æ‰¾åˆ°è¿ç»­åºåˆ—çš„èµ·ç‚¹
             if (!numSet.contains(num - 1)) {
                 int currentNum = num;
                 int currentStreak = 1;
-                //Èç¹ûÁ¬Ğø£¬¼ÌĞø±éÀú
+                //å¦‚æœè¿ç»­ï¼Œç»§ç»­éå†
                 while (numSet.contains(currentNum + 1)) {
                     currentNum += 1;
                     currentStreak += 1;

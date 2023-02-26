@@ -3,7 +3,7 @@ package com.wgp.easy.tree;
 import util.TreeNode;
 
 /**
- * ¶ş²æÊ÷µÄ×î´óÉî¶È
+ * äºŒå‰æ ‘çš„æœ€å¤§æ·±åº¦
  */
 public class E104_MaxDepth {
     public int maxDepth(TreeNode root) {

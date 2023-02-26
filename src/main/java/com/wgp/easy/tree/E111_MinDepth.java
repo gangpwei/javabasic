@@ -8,14 +8,14 @@ import org.junit.Test;
 import util.TreeNode;
 
 /**
- * Çó¶ş²æÊ÷µÄ×îĞ¡Éî¶È
+ * æ±‚äºŒå‰æ ‘çš„æœ€å°æ·±åº¦
  * @author gangpeng.wgp
- * @date 2023/1/1 ÏÂÎç8:14
+ * @date 2023/1/1 ä¸‹åˆ8:14
  */
 public class E111_MinDepth {
 
     /**
-     * Éî¶ÈÓÅÏÈ
+     * æ·±åº¦ä¼˜å…ˆ
      * @param root
      * @return
      */
@@ -23,7 +23,7 @@ public class E111_MinDepth {
         if (root == null) {
             return 0;
         }
-        //×¢Òâ£º²»ÊÇÖ±½ÓÈ¡2¸ö×Ó½ÚµãµÄ×îĞ¡Éî¶È¡£Èç¹ûÒ»¸ö×Ó½ÚµãÎª¿Õ£¬Ğè¿´ÁíÍâÒ»¸ö½ÚµãµÄÉî¶È
+        //æ³¨æ„ï¼šä¸æ˜¯ç›´æ¥å–2ä¸ªå­èŠ‚ç‚¹çš„æœ€å°æ·±åº¦ã€‚å¦‚æœä¸€ä¸ªå­èŠ‚ç‚¹ä¸ºç©ºï¼Œéœ€çœ‹å¦å¤–ä¸€ä¸ªèŠ‚ç‚¹çš„æ·±åº¦
         int leftDepth = minDepth1(root.left);
         int rightDepth = minDepth1(root.right);
         if(leftDepth == 0 && rightDepth == 0){
@@ -35,7 +35,7 @@ public class E111_MinDepth {
     }
 
     /**
-     * ¹ã¶ÈÓÅÏÈ
+     * å¹¿åº¦ä¼˜å…ˆ
      * @param root
      * @return
      */
@@ -51,7 +51,7 @@ public class E111_MinDepth {
             depth++;
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                //µ±Ã»ÓĞÒ¶×Ó½Úµã£¬·µ»ØÉî¶È
+                //å½“æ²¡æœ‰å¶å­èŠ‚ç‚¹ï¼Œè¿”å›æ·±åº¦
                 if(node.right == null && node.left == null){
                     return depth;
                 }

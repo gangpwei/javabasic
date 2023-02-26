@@ -8,28 +8,28 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * ½£Ö¸ Offer II 116. Ê¡·İÊıÁ¿
+ * å‰‘æŒ‡ Offer II 116. çœä»½æ•°é‡
  * @author gangpeng.wgp
- * @date 2023/1/2 ÏÂÎç12:46
+ * @date 2023/1/2 ä¸‹åˆ12:46
  */
 public class M116_ProvinceCount {
 
-    //ÓĞ n ¸ö³ÇÊĞ£¬ÆäÖĞÒ»Ğ©±Ë´ËÏàÁ¬£¬ÁíÒ»Ğ©Ã»ÓĞÏàÁ¬¡£Èç¹û³ÇÊĞ a Óë³ÇÊĞ b Ö±½ÓÏàÁ¬£¬ÇÒ³ÇÊĞ b Óë³ÇÊĞ c Ö±½ÓÏàÁ¬£¬ÄÇÃ´³ÇÊĞ a Óë³ÇÊĞ c ¼ä½ÓÏàÁ¬¡£
-    //Ê¡·İ ÊÇÒ»×éÖ±½Ó»ò¼ä½ÓÏàÁ¬µÄ³ÇÊĞ£¬×éÄÚ²»º¬ÆäËûÃ»ÓĞÏàÁ¬µÄ³ÇÊĞ¡£
-    //¸øÄãÒ»¸ö n x n µÄ¾ØÕó isConnected £¬ÆäÖĞ isConnected[i][j] = 1 ±íÊ¾µÚ i ¸ö³ÇÊĞºÍµÚ j ¸ö³ÇÊĞÖ±½ÓÏàÁ¬£¬¶ø isConnected[i][j] = 0 ±íÊ¾¶şÕß²»Ö±½ÓÏàÁ¬¡£
-    //·µ»Ø¾ØÕóÖĞ Ê¡·İ µÄÊıÁ¿¡£
+    //æœ‰ n ä¸ªåŸå¸‚ï¼Œå…¶ä¸­ä¸€äº›å½¼æ­¤ç›¸è¿ï¼Œå¦ä¸€äº›æ²¡æœ‰ç›¸è¿ã€‚å¦‚æœåŸå¸‚ a ä¸åŸå¸‚ b ç›´æ¥ç›¸è¿ï¼Œä¸”åŸå¸‚ b ä¸åŸå¸‚ c ç›´æ¥ç›¸è¿ï¼Œé‚£ä¹ˆåŸå¸‚ a ä¸åŸå¸‚ c é—´æ¥ç›¸è¿ã€‚
+    //çœä»½ æ˜¯ä¸€ç»„ç›´æ¥æˆ–é—´æ¥ç›¸è¿çš„åŸå¸‚ï¼Œç»„å†…ä¸å«å…¶ä»–æ²¡æœ‰ç›¸è¿çš„åŸå¸‚ã€‚
+    //ç»™ä½ ä¸€ä¸ª n x n çš„çŸ©é˜µ isConnected ï¼Œå…¶ä¸­ isConnected[i][j] = 1 è¡¨ç¤ºç¬¬ i ä¸ªåŸå¸‚å’Œç¬¬ j ä¸ªåŸå¸‚ç›´æ¥ç›¸è¿ï¼Œè€Œ isConnected[i][j] = 0 è¡¨ç¤ºäºŒè€…ä¸ç›´æ¥ç›¸è¿ã€‚
+    //è¿”å›çŸ©é˜µä¸­ çœä»½ çš„æ•°é‡ã€‚
 
     public int findCircleNum(int[][] isConnected) {
-        //³ÇÊĞÊıÁ¿
+        //åŸå¸‚æ•°é‡
         int citys = isConnected.length;
-        //³ÇÊĞÊÇ·ñ±»±éÀú¹ı
+        //åŸå¸‚æ˜¯å¦è¢«éå†è¿‡
         boolean[] visited = new boolean[citys];
-        //Ê¡·İÊıÁ¿
+        //çœä»½æ•°é‡
         int provinceCnt = 0;
         for (int i = 0; i < citys; i++) {
-            //µ±Ç°³ÇÊĞ£¬Ã»ÓĞ±»·ÃÎÊ¹ı£¬¾ÍÊÇÒ»¸öĞÂµÄÊ¡
+            //å½“å‰åŸå¸‚ï¼Œæ²¡æœ‰è¢«è®¿é—®è¿‡ï¼Œå°±æ˜¯ä¸€ä¸ªæ–°çš„çœ
             if(!visited[i]){
-                //ÓëµÚi¸ö³ÇÊĞÏàÁ¬µÄËùÓĞ³ÇÊĞ¶¼´ò±ê£¬²¢µİ¹éµÄ±éÀú¼ä½ÓÏàÁ¬µÄ³ÇÊĞ
+                //ä¸ç¬¬iä¸ªåŸå¸‚ç›¸è¿çš„æ‰€æœ‰åŸå¸‚éƒ½æ‰“æ ‡ï¼Œå¹¶é€’å½’çš„éå†é—´æ¥ç›¸è¿çš„åŸå¸‚
                 dfs(i, citys,  visited, isConnected);
                 provinceCnt ++;
             }
@@ -40,7 +40,7 @@ public class M116_ProvinceCount {
 
 
     /**
-     * Éî¶È±éÀú£¬ÓëµÚi¸ö³ÇÊĞÏàÁ¬µÄËùÓĞ³ÇÊĞ¶¼´ò±ê£¬²¢µİ¹éµÄ±éÀú¼ä½ÓÏàÁ¬µÄ³ÇÊĞ
+     * æ·±åº¦éå†ï¼Œä¸ç¬¬iä¸ªåŸå¸‚ç›¸è¿çš„æ‰€æœ‰åŸå¸‚éƒ½æ‰“æ ‡ï¼Œå¹¶é€’å½’çš„éå†é—´æ¥ç›¸è¿çš„åŸå¸‚
      * @param i
      * @param citys
      * @param visited
@@ -49,21 +49,21 @@ public class M116_ProvinceCount {
     private void dfs(int i, int citys, boolean[] visited, int[][] isConnected) {
         for (int j = 0; j < citys; j++) {
             if(isConnected[i][j] == 1 && !visited[j]){
-                //°ÑºÍcitys[i]Ö±½ÓÏàÁ¬µÄ³ÇÊĞ£¬¶¼±ê¼ÇÒÑ·ÃÎÊ
+                //æŠŠå’Œcitys[i]ç›´æ¥ç›¸è¿çš„åŸå¸‚ï¼Œéƒ½æ ‡è®°å·²è®¿é—®
                 visited[j] = true;
 
-                //°ÑºÍcitys[i]¼ä½ÓÏàÁ¬µÄ³ÇÊĞ£¬¶¼±ê¼ÇÒÑ·ÃÎÊ
+                //æŠŠå’Œcitys[i]é—´æ¥ç›¸è¿çš„åŸå¸‚ï¼Œéƒ½æ ‡è®°å·²è®¿é—®
                 dfs(j, citys, visited, isConnected);
             }
         }
     }
 
     public int findCircleNum2(int[][] isConnected) {
-        //³ÇÊĞÊıÁ¿
+        //åŸå¸‚æ•°é‡
         int citys = isConnected.length;
-        //³ÇÊĞÊÇ·ñ±»±éÀú¹ı
+        //åŸå¸‚æ˜¯å¦è¢«éå†è¿‡
         boolean[] visited = new boolean[citys];
-        //Ê¡·İÊıÁ¿
+        //çœä»½æ•°é‡
         int provinceCnt = 0;
         Queue<Integer> queue = new LinkedList<>();
         for (int i = 0; i < citys; i++) {

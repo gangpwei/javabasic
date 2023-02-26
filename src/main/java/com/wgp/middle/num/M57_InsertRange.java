@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ²åÈëÇø¼ä
+ * æ’å…¥åŒºé—´
  * @author : gangpeng.wgp
  * @date : 2022/12/4
  */
 class M57_InsertRange {
 
-    //¸øÄãÒ»¸ö ÎŞÖØµşµÄ £¬°´ÕÕÇø¼äÆğÊ¼¶ËµãÅÅĞòµÄÇø¼äÁĞ±í¡£
+    //ç»™ä½ ä¸€ä¸ª æ— é‡å çš„ ï¼ŒæŒ‰ç…§åŒºé—´èµ·å§‹ç«¯ç‚¹æ’åºçš„åŒºé—´åˆ—è¡¨ã€‚
     //
-    //ÔÚÁĞ±íÖĞ²åÈëÒ»¸öĞÂµÄÇø¼ä£¬ÄãĞèÒªÈ·±£ÁĞ±íÖĞµÄÇø¼äÈÔÈ»ÓĞĞòÇÒ²»ÖØµş£¨Èç¹ûÓĞ±ØÒªµÄ»°£¬¿ÉÒÔºÏ²¢Çø¼ä£©¡£
+    //åœ¨åˆ—è¡¨ä¸­æ’å…¥ä¸€ä¸ªæ–°çš„åŒºé—´ï¼Œä½ éœ€è¦ç¡®ä¿åˆ—è¡¨ä¸­çš„åŒºé—´ä»ç„¶æœ‰åºä¸”ä¸é‡å ï¼ˆå¦‚æœæœ‰å¿…è¦çš„è¯ï¼Œå¯ä»¥åˆå¹¶åŒºé—´ï¼‰ã€‚
 
     public int[][] insert(int[][] intervals, int[] newInterval) {
         int left = newInterval[0];
@@ -21,17 +21,17 @@ class M57_InsertRange {
         List<int[]> ansList = new ArrayList<int[]>();
         for (int[] interval : intervals) {
             if (interval[0] > right) {
-                // ÔÚ²åÈëÇø¼äµÄÓÒ²àÇÒÎŞ½»¼¯
+                // åœ¨æ’å…¥åŒºé—´çš„å³ä¾§ä¸”æ— äº¤é›†
                 if (!placed) {
                     ansList.add(new int[]{left, right});
                     placed = true;                    
                 }
                 ansList.add(interval);
             } else if (interval[1] < left) {
-                // ÔÚ²åÈëÇø¼äµÄ×ó²àÇÒÎŞ½»¼¯
+                // åœ¨æ’å…¥åŒºé—´çš„å·¦ä¾§ä¸”æ— äº¤é›†
                 ansList.add(interval);
             } else {
-                // Óë²åÈëÇø¼äÓĞ½»¼¯£¬¼ÆËãËüÃÇµÄ²¢¼¯
+                // ä¸æ’å…¥åŒºé—´æœ‰äº¤é›†ï¼Œè®¡ç®—å®ƒä»¬çš„å¹¶é›†
                 left = Math.min(left, interval[0]);
                 right = Math.max(right, interval[1]);
             }

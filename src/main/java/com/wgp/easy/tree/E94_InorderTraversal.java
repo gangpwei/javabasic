@@ -6,7 +6,7 @@ import java.util.List;
 import util.TreeNode;
 
 /**
- * 二叉树的中序遍历
+ * 浜屽弶鏍戠殑涓簭閬嶅巻
  */
 public class E94_InorderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {

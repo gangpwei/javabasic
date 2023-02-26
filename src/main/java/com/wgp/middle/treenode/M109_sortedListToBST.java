@@ -7,7 +7,7 @@ import com.wgp.easy.ListNode;
 import util.TreeNode;
 
 /**
- * ÓĞĞòÁ´±í×ª»»¶ş²æËÑË÷Ê÷
+ * æœ‰åºé“¾è¡¨è½¬æ¢äºŒå‰æœç´¢æ ‘
  * @author : gangpeng.wgp
  * @date : 2022/12/4
  */
@@ -15,7 +15,7 @@ class M109_sortedListToBST {
     public TreeNode sortedListToBST(ListNode head) {
         List<ListNode> nodeList = new ArrayList<ListNode>();
         
-        //±éÀúËùÓĞ½Úµã£¬·ÅÈëListÀï
+        //éå†æ‰€æœ‰èŠ‚ç‚¹ï¼Œæ”¾å…¥Listé‡Œ
         while(head != null){
             nodeList.add(head);
             head = head.next;
@@ -25,7 +25,7 @@ class M109_sortedListToBST {
     }
 
     public TreeNode sortedListToBST(List<ListNode> nodeList, int left, int right) {
-        //×¢Òâ£º½áÊøµÄÌõ¼şÊÇ > ¶ø²»ÊÇ >= 
+        //æ³¨æ„ï¼šç»“æŸçš„æ¡ä»¶æ˜¯ > è€Œä¸æ˜¯ >= 
         if(left > right){
             return null;
         }

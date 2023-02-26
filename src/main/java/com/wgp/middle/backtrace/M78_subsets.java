@@ -6,14 +6,14 @@ import java.util.List;
 import org.junit.Test;
 
 /**
- * È«ÅÅÁĞ
+ * å…¨æ’åˆ—
  *
  * @author : gangpeng.wgp
  * @date : 2022/12/5
  */
 public class M78_subsets {
 
-    //¸ø¶¨Ò»¸ö²»º¬ÖØ¸´Êı×ÖµÄÊı×é nums £¬·µ»ØÆä ËùÓĞ¿ÉÄÜµÄÈ«ÅÅÁĞ ¡£Äã¿ÉÒÔ °´ÈÎÒâË³Ğò ·µ»Ø´ğ°¸¡£
+    //ç»™å®šä¸€ä¸ªä¸å«é‡å¤æ•°å­—çš„æ•°ç»„ nums ï¼Œè¿”å›å…¶ æ‰€æœ‰å¯èƒ½çš„å…¨æ’åˆ— ã€‚ä½ å¯ä»¥ æŒ‰ä»»æ„é¡ºåº è¿”å›ç­”æ¡ˆã€‚
 
     List<List<Integer>> res;
     List<Integer> list = new ArrayList<>();
@@ -25,19 +25,19 @@ public class M78_subsets {
     }
 
     public void backTracing(int[] nums, int start){
-        // µ½Êı×éÄ©Î²½áÊøµ±Ç°µİ¹é
+        // åˆ°æ•°ç»„æœ«å°¾ç»“æŸå½“å‰é€’å½’
         if(start == nums.length){
             return;
         }
 
-        //×¢Òâi ´Ó´«ÈëµÄstart¿ªÊ¼±éÀú
+        //æ³¨æ„i ä»ä¼ å…¥çš„startå¼€å§‹éå†
         for(int i = start; i < nums.length; i++){
-            // ½«µ±Ç°Êı¼ÓÈëlist
+            // å°†å½“å‰æ•°åŠ å…¥list
             list.add(nums[i]);
             res.add(new ArrayList<>(list));
-            // µİ¹é ²»ÄÜÖØ¸´Ê¹ÓÃµ±Ç°Êı Òò´ËÏÂÒ»ÂÖ´Ói+1¿ªÊ¼
+            // é€’å½’ ä¸èƒ½é‡å¤ä½¿ç”¨å½“å‰æ•° å› æ­¤ä¸‹ä¸€è½®ä»i+1å¼€å§‹
             backTracing(nums, i+1);
-            // »ØËİ »ØÍË¸Õ¸Õ¼ÓµÄÊı
+            // å›æº¯ å›é€€åˆšåˆšåŠ çš„æ•°
             list.remove(list.size()-1);
         }
     }

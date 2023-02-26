@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * ÈıÊıÖ®ºÍ
+ * ä¸‰æ•°ä¹‹å’Œ
  * @author : gangpeng.wgp
  * @date : 2022/12/6
  */
@@ -14,27 +14,27 @@ class M15_ThreeSum {
         int n = nums.length;
         Arrays.sort(nums);
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
-        // Ã¶¾Ù a
+        // æšä¸¾ a
         for (int first = 0; first < n; ++first) {
-            // ĞèÒªºÍÉÏÒ»´ÎÃ¶¾ÙµÄÊı²»ÏàÍ¬
+            // éœ€è¦å’Œä¸Šä¸€æ¬¡æšä¸¾çš„æ•°ä¸ç›¸åŒ
             if (first > 0 && nums[first] == nums[first - 1]) {
                 continue;
             }
-            // c ¶ÔÓ¦µÄÖ¸Õë³õÊ¼Ö¸ÏòÊı×éµÄ×îÓÒ¶Ë
+            // c å¯¹åº”çš„æŒ‡é’ˆåˆå§‹æŒ‡å‘æ•°ç»„çš„æœ€å³ç«¯
             int third = n - 1;
             int target = -nums[first];
-            // Ã¶¾Ù b
+            // æšä¸¾ b
             for (int second = first + 1; second < n; ++second) {
-                // ĞèÒªºÍÉÏÒ»´ÎÃ¶¾ÙµÄÊı²»ÏàÍ¬
+                // éœ€è¦å’Œä¸Šä¸€æ¬¡æšä¸¾çš„æ•°ä¸ç›¸åŒ
                 if (second > first + 1 && nums[second] == nums[second - 1]) {
                     continue;
                 }
-                // ĞèÒª±£Ö¤ b µÄÖ¸ÕëÔÚ c µÄÖ¸ÕëµÄ×ó²à
+                // éœ€è¦ä¿è¯ b çš„æŒ‡é’ˆåœ¨ c çš„æŒ‡é’ˆçš„å·¦ä¾§
                 while (second < third && nums[second] + nums[third] > target) {
                     --third;
                 }
-                // Èç¹ûÖ¸ÕëÖØºÏ£¬Ëæ×Å b ºóĞøµÄÔö¼Ó
-                // ¾Í²»»áÓĞÂú×ã a+b+c=0 ²¢ÇÒ b<c µÄ c ÁË£¬¿ÉÒÔÍË³öÑ­»·
+                // å¦‚æœæŒ‡é’ˆé‡åˆï¼Œéšç€ b åç»­çš„å¢åŠ 
+                // å°±ä¸ä¼šæœ‰æ»¡è¶³ a+b+c=0 å¹¶ä¸” b<c çš„ c äº†ï¼Œå¯ä»¥é€€å‡ºå¾ªç¯
                 if (second == third) {
                     break;
                 }

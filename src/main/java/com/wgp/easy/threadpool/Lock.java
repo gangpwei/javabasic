@@ -4,15 +4,25 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 用synchronized实现lock unlock
+ *
  * @author gangpeng.wgp
  * @date 2022/11/18 11:36 上午
  */
 public class Lock {
 
-    private static final long NONE = -1;   //当没有任何线程持有锁时锁的线程ID
-    private static long owner = NONE;   //区分锁的持有者线程的标志
-    private static int state;   //锁的状态,使锁具有可重入性
-    private static long lastThreadId;   //记录上一次持有锁的线程ID,使锁具有可重入性,1是确保线程在重入后解锁的次数和重入次数相同,清空锁的拥有者下次不报异常,2是记录上次线程ID,在锁状态位大于0并且当前线程和上次线程不一致时当前线程要等待,避免锁了10次解锁2次其他线程就进来了
+    //当没有任何线程持有锁时锁的线程ID
+    private static final long NONE = -1;
+
+    //区分锁的持有者线程的标志
+    private static long owner = NONE;
+
+    //锁的状态,使锁具有可重入性
+    private static int state;
+
+    //记录上一次持有锁的线程ID,使锁具有可重入性,
+    // 1.确保线程在重入后解锁的次数和重入次数相同,清空锁的拥有者下次不报异常,
+    // 2.记录上次线程ID, 在锁状态位大于0并且当前线程和上次线程不一致时当前线程要等待, 避免锁了10次解锁2次其他线程就进来了
+    private static long lastThreadId;
 
     public synchronized void lock() {
         long currentThreadId = Thread.currentThread().getId();
@@ -50,7 +60,7 @@ public class Lock {
             new Thread(() -> {
                 lock.lock();
                 try {
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(1);
                     System.out.println(Thread.currentThread().getName() + "执行");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
